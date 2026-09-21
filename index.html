@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <meta name="description" content="Software Architecture Solutions for Enterprise Systems">
+  <!--Disabling browser caching -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    var htmlUrl = "https://github.com/thirumalx/nesl"
+    var title = "Software Architecture Solutions for Enterprise Systems"
+    window.$docsify = {
+      name: 'Software Architecture Solutions for Enterprise Systems',
+      repo: 'https://www.github.com/thirumalx/software_architect_solution',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      loadNavbar: true,
+      search: 'auto', // default
+      //Share
+      share: {
+            reddit: {
+                url: htmlUrl,
+                title: title,
+            },
+            linkedin: {
+                url: htmlUrl,
+                title: title,
+            },
+            facebook: {
+                url: htmlUrl,
+                title: title,
+            },
+            twitter: {
+                url: htmlUrl,
+                title: title,
+            },
+            whatsapp: {
+                url: htmlUrl,
+                title: title,
+            },
+            telegram: {
+                url: htmlUrl,
+                title: title,
+            },
+        },
+     //Drawio
+     markdown: {
+      renderer: {
+
+        code: function (code, lang) {
+          if (lang === 'drawio') {
+            if (window.drawioConverter) {
+              console.log('drawio 转化中')
+              return window.drawioConverter(code)
+            } else {
+              return `<div class='drawio-code'>${code}</div>`
+            }
+          } else {
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      }
+    }
+    }
+  </script>
+  <!-- Docsify v5 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js"></script>
+  <!-- Edit on Github plugin-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//unpkg.com/docsify-share/build/index.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@5/dist/plugins/zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-drawio/viewer.min.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/docsify-drawio/drawio.js'></script>
+</body>
+</html>
